@@ -1,0 +1,41 @@
+<idea-plugin version="2">
+  <id>hrabosch_example</id>
+  <name>IntelliJ Plugin Example</name>
+  <version>1.0</version>
+  <vendor email="your_email@example.com" url="http://www.hrabosch.com">Hrabosch</vendor>
+
+  <description><![CDATA[
+      Example IntelliJ IDEA plugin for blog posts on <a href="http://hrabosch.com/".<br>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.com.ca.ipv.plugins.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <group id="genClassProject" text="Generate class" popup="true">
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+      <action id="classGenerator"
+        class="org.hrabosch.plugin.intellij.example.action.ClassGenerateAction"
+        text="Class generator"
+        description="UI for generating class.">
+      </action>
+    </group>
+  </actions>
+
+</idea-plugin>
